@@ -12,7 +12,7 @@ function guessGame() {
     }
 
     if (guess === randomNum) {
-      alert(`Congratulations! You've guessed the number ${randomNumber} correctly.`);
+      alert(`Congratulations! You've guessed the number ${randomNum} correctly.`);
       break;
     } else if (guess < randomNum) {
       alert("Too low! Please, try again.");
