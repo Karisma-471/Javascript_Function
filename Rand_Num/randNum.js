@@ -1,25 +1,14 @@
-const randomNum = 25; 
+function guessTheNum(n) {
+    const randNumb = Math.floor(Math.random() * 50 + 1);
 
-function guessGame() {
-  let guess;
-
-  while (true) {
-    guess = parseInt(prompt("Please guess the number between 1 and 50:"));
-
-    if (isNaN(guess)) {
-      alert("Not a valid number. Please enter a valid number.");
-      continue;
-    }
-
-    if (guess === randomNum) {
-      alert(`Congratulations! You've guessed the number ${randomNum} correctly.`);
-      break;
-    } else if (guess < randomNum) {
-      alert("Too low! Please, try again.");
+    if (n === randNumb) {
+        return `Congratulations! You've guessed the right number ${randNumb}!`;
+    } else if (n > randNumb) {
+        return `${n} is too high! Try again.`;
     } else {
-      alert("Too high! Please try again.");
+        return `${n} is too low! Try again.`;
     }
-  }
 }
 
-guessGame();
+const userGuess = 29;
+console.log(guessTheNum(userGuess));
